@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "/home/prithvi/.local/share/virtualenvs/remote-control-spotify-DirFEtiS/bin/python",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": false
+}

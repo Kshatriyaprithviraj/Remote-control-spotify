@@ -23,11 +23,9 @@ def _client_credentials(conf):
                              headers=headers,
                              data=options)
     content = json.loads(response.content.decode('utf-8'))
-    
     if response.status_code == 400:
         error_description = content.get('error_description','')
         raise BadRequestError(error_description)
-    
     access_token = content.get('access_token', None)
     token_type = content.get('token_type', None)
     expires_in = content.get('expires_in', None)
@@ -37,9 +35,7 @@ def _client_credentials(conf):
 def _authorization_code(conf):
     current_dir = os.path.abspath(os.curdir)
     file_path = os.path.join(current_dir, '.pyotify')
-    
     auth_key = get_auth_key(conf.client_id, conf.client_secret)
-    
     try:
         with open(file_path, mode='r', encoding='UTF-8') as file:
             refresh_token = file.readline()
@@ -62,7 +58,6 @@ def _refresh_access_token(auth_key, refresh_token):
         data=options
     )
     content = json.loads(response.content.decode('utf-8'))
-    
     if not response.ok:
         error_description = content.get('error_description', None)
         raise BadRequestError(error_description)
@@ -76,5 +71,4 @@ def _refresh_access_token(auth_key, refresh_token):
 def authenticate(conf):
     if conf.auth_method == authMethod.CLIENT_CREDENTIALS:
         return _client_credentials(conf)
-    
     return _authorization_code(conf)
