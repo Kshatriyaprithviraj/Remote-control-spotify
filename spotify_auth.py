@@ -7,15 +7,10 @@ from flask import Flask
 from flask import render_template
 from flask import request
 
-# from pyotify.core.config import read_config
-# from pyotify.core.exceptions import BadRequestError
-# from pyotify.auth.authorization import Authorization
-# from pyotify.auth.auth import get_auth_key
-
-from pyotify.core import read_config
-from pyotify.core import BadRequestError
-from pyotify.auth import Authorization  
-from pyotify.auth import get_auth_key
+from pyotify.core.config import read_config
+from pyotify.core.exceptions import BadRequestError
+from pyotify.auth.authorization import Authorization
+from pyotify.auth.auth import get_auth_key
 
 # Create Flask app.
 app = Flask(__name__)
@@ -42,7 +37,6 @@ def home():
 
 @app.route('/callback')
 def callback():
-    config = read_config()
     code = request.args.get('code', '')
     response = _authorization_code_request(code)
 
