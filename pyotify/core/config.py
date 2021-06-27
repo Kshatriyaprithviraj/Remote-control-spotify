@@ -7,7 +7,7 @@ from pyotify.auth import authMethod
 # accessible by attribute lookup.
 Config = namedtuple('Config', ['client_id',
                                'client_secret',
-                               'auth_token_url',
+                               'access_token_url',
                                'auth_url',
                                'api_version',
                                'api_url', 'base_url',
