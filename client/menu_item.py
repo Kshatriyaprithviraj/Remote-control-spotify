@@ -13,11 +13,11 @@ class MenuItem:
         self.action = return_id
         self.selected = selected
 
-        def __eq__(self, other):
-            return self.id == other.id
+    def __eq__(self, other):
+        return self.id == other.id
 
-        def __len__(self):
-            return len(self.label)
+    def __len__(self):
+        return len(self.label)
 
-        def __str__(self):
-            return self.label
+    def __str__(self):
+        return self.label
