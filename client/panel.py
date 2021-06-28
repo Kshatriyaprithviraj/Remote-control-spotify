@@ -4,7 +4,7 @@ import curses.panel
 from uuid import uuid1
 
 
-class panel:
+class Panel:
     def __init__(self, title, dimensions):
         height, width, y, x = dimensions
 
