@@ -5,7 +5,7 @@ from curses import wrapper
 from curses.textpad import Textbox
 from curses.textpad import rectangle
 
-from .client.menu import Menu
+from client.menu import Menu
 from client.data_manager import DataManager
 
 
