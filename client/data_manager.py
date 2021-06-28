@@ -44,16 +44,16 @@ class DataManager():
                 ('Couldn\'t find artist for' f'the artist_id: {artist_id}')
             )
         return [MenuItem(self._format_artist_label(album), album) for album in albums[:max_items]]
-    
+
     def get_album_tracklist(self, album_id):
         results = get_album_tracks(album_id, self._auth)
-        
+
         if not results:
             raise EmptyResultsError('Couldn\'t find the tracks for this album')
-        
+
         tracks = results['items']
-        
+
         return [MenuItem(self._format_track_label(track), track) for track in tracks]
-    
-    def play_tracklist(self, track_uri):
+
+    def play_track(self, track_uri):
         play(track_uri, self._auth)
