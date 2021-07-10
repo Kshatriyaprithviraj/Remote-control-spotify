@@ -1,7 +1,8 @@
 import os
 import yaml
 from collections import namedtuple
-from auth import authMethod
+
+from .auth import authMethod
 
 # namedtuples' are tuple-like objects with a name and with fields
 # accessible by attribute lookup.
