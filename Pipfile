@@ -5,8 +5,8 @@ name = "pypi"
 
 [packages]
 flask = "*"
-pyyaml = "*"
 requests = "*"
+pyyaml = "*"
 
 [dev-packages]
 pylint = "*"
