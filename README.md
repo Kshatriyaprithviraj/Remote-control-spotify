@@ -2,20 +2,21 @@
 
 A terminal application for spotify.🔫
 
-# Features 🎊
+## Features 🎊
 
 You can search 🔍 for
+
 - artists
 - albums
 - play the searched content.
 
-# Toolset 🛠
+## Toolset 🛠
 
 - [flask](https://flask.palletsprojects.com/en/2.0.x/)
 - [requests](https://pypi.org/project/requests/)
 - [pyyaml](https://pypi.org/project/PyYAML/)
 
-# Directory structure 🛡
+## Directory structure 🛡
 
 ```shell
 ./
@@ -54,7 +55,7 @@ You can search 🔍 for
     └── index.html
 ```
 
-# To run 🏃🏻‍♂️
+## To run 🏃🏻‍♂️
 
 > `git clone https://github.com/Kshatriyaprithviraj/Remote-control-spotify.git` <br>
 > `cd ./remote*` <br>
