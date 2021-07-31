@@ -1,9 +1,10 @@
 import os
 import yaml
 from collections import namedtuple
-from pyotify.auth import authMethod
 
-# namedtuples' are tuple-like objects with a name and with fields
+from ..auth import authMethod
+
+# namedtuples are tuple-like objects with a name and with fields
 # accessible by attribute lookup.
 Config = namedtuple('Config', ['client_id',
                                'client_secret',
@@ -29,13 +30,13 @@ def read_config():
             config['auth_method'] = authMethod.__members__.get(auth_method)
             # returning an instance of namedtuple - Config.
             return Config(**config)
-    except IOError as Ie:
+    except IOError:
         print("""Err: Could not find the configuration file `config.yaml` 'on your current directory.
             Default format is: ',
             client_id: 'your_client_id'
             client_secret: 'you_client_secret'
             access_token_url: 'https://accounts.spotify.com/api/token'
-            auth_url: 'http://accounts.spotify.com/authorize'
+            auth_url: 'https://accounts.spotify.com/authorize'
             api_version: 'v1'
             api_url: 'http//api.spotify.com'
             auth_method: 'authentication method'
