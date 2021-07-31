@@ -10,4 +10,3 @@ from .search import search_track
 from .artist import get_artist_albums
 from .album import get_album_tracks
 from .player import play
-

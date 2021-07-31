@@ -1,17 +1,17 @@
-from .menu_item import MenuItem
+from menu_item import MenuItem
 
 from pyotify.core import search_artist
 from pyotify.core import get_artist_albums
 from pyotify.core import get_album_tracks
 from pyotify.core import play
 
-from .empty_results_error import EmptyResultsError
+from empty_results_error import EmptyResultsError
 
 from pyotify.auth import authenticate
 from pyotify.core import read_config
 
 
-class DataManager():
+class DataManager:
     def __init__(self):
         self._conf = read_config()
         self._auth = authenticate(self._conf)

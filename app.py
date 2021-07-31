@@ -73,7 +73,7 @@ def main(stdscr):
                 _id, uri = action_result
                 tracks = _data_manager.get_album_tracklist(_id)
                 current_panel.hide()
-                current_panel = tracks_panel()
+                current_panel = tracks_panel
                 current_panel.items = tracks
                 current_panel.show()
             elif current_panel == tracks_panel and action_result is not None:
@@ -101,5 +101,5 @@ def main(stdscr):
 
 try:
     wrapper(main)
-except:
+except KeyboardInterrupt:
     print('Bye amigo! Hope to see you soon. :)')

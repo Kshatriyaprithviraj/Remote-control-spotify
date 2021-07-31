@@ -8,10 +8,10 @@ from flask import render_template
 from flask import request
 
 
-from .pyotify.core.config import read_config
-from .pyotify.core.exceptions import BadRequestError
-from .pyotify.auth.authorization import Authorization
-from .pyotify.auth.auth import get_auth_key
+from pyotify.core.config import read_config
+from pyotify.core.exceptions import BadRequestError
+from pyotify.auth.authorization import Authorization
+from pyotify.auth.auth import get_auth_key
 
 
 # Create Flask app.
